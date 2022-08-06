@@ -27,15 +27,15 @@ void setup() {
 
   Serial.println("LoRa Receiver");
 
-  if (!LoRa.begin(169E6)) {
+  if (!LoRa.begin(915E6)) {
     Serial.println("Starting LoRa failed!");
     while (1);
   }
  LoRa.setTxPower(27);
 
-  LoRa.setSpreadingFactor(7); 
+  LoRa.setSpreadingFactor(6); 
 LoRa.setSignalBandwidth(125E3); 
-LoRa.setCodingRate4(8);
+LoRa.setCodingRate4(5);
 }
 
 void loop() {
